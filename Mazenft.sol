@@ -22,9 +22,10 @@ contract MyNFT is ERC721 {
 
     	string memory name,
 
-    	string memory symbol) 	 
+    	string memory symbol
+        ) 	 
 
- 	ERC721(name, symbol) {
+ 	ERC721(mazee, MZ) {
 
     }
 
@@ -36,7 +37,7 @@ contract MyNFT is ERC721 {
 
    	 // base URI for NFT. Must end with /
 
-   	 _uris\[_tokenIdCounter.current()\] = uri;
+   	 _uris[_tokenIdCounter.current()] = uri;
 
    	 return _tokenIdCounter.current();
 
@@ -48,7 +49,7 @@ contract MyNFT is ERC721 {
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
 
-    	return _uris\[tokenId\];
+    	return _uris[tokenId];
 
     }
 
